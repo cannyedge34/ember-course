@@ -1,8 +1,8 @@
 <h2>Big Orgs</h2>
-
-<ul>
-  <li>{{link-to 'Facebook' 'org.repos' 'facebook'}}</li>
-  <li>{{link-to 'Google' 'org.repos' 'google'}}</li>
-  <li>{{link-to 'Amazon' 'org.repos' 'amazon'}}</li>
-</ul>
 {{outlet}}
+<ul>
+  {{#each model as |org|}}
+    <li>{{link-to org.id "org" org.id }}</li>
+  {{/each}}
+</ul>
+
