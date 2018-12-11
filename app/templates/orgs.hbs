@@ -1,9 +1,9 @@
 <h2>Big Orgs</h2>
-{{outlet}}
+
 <ul>
   {{#each model as |org|}}
     <li>
-      <span {{ action 'favoriteClicked' org }}>
+      <span {{ action "favoriteClicked" org }}>
         Favorite
       </span>
       {{link-to org.id "org" org.id }}
@@ -11,3 +11,4 @@
   {{/each}}
 </ul>
 
+{{outlet}}

@@ -1,8 +1,11 @@
-{{link-to 'Back to list of companies' 'orgs'}}
+{{link-to "Back to list of companies" "orgs"}}
 
-<h4>Facebook</h4>
+<h4>
+  <a target="_blank" href="{{model.repos_url}}"> {{model.name}}</a>
+</h4>
+<img srcset="{{model.avatar_url}}" width="50" />
 
-<span {{action 'addToRecords' 'Two'}}>Add me</span>
+<span {{action "addToRecords" "Two"}}>Add me</span>
 
 <ul>
   {{#each records as |record|}}
@@ -12,5 +15,4 @@
   {{/each}}
 </ul>
 
-{{log records}}
 {{outlet}}
