@@ -1,4 +1,9 @@
+<ul>
+  {{#each model as |issue|}}
+    <li>
+      {{issue.title}}
+      <span>----------> {{issue.state}}</span>
+    </li>
+  {{/each}}
+</ul>
 {{outlet}}
-
-
-<p>Issues</p>
