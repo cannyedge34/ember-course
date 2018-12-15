@@ -26,6 +26,12 @@ export default Route.extend({
     addToRecords(val) {
       alert(`Hi, ${val}`);
       this.get('authManager.records').addObject({id: val});
+    },
+    error(res) {
+      if(res.status === 404) {
+        return this.intermediateTransitionTo('org.notfound')
+      }
+      return true;
     }
   },
 });

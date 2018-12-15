@@ -11,8 +11,9 @@ Router.map(function() {
   this.route('orgs'); // /orgs
   
   // INDIVIDUAL ORG
-  this.route('org', {path: 'org/:id'}, function() { // /org/facebook
-    
+  this.route('org', {path: 'org/:id'}, function() {
+    // /org/facebook
+
     //LIST OF REPOS
     this.route('repos');
 
@@ -21,6 +22,8 @@ Router.map(function() {
       this.route('issues');
       this.route('contributors');
     }); // org/facebook/react
+
+    this.route('notfound');
   });
   this.route('notfound', {path: '*path'});
 });

@@ -3,10 +3,11 @@
 <h4>
   <a target="_blank" href="{{model.repos_url}}"> {{model.name}}</a>
 </h4>
-<img srcset="{{model.avatar_url}}" width="50" />
+<img src="{{model.avatar_url}}" width="50" />
 
 <span {{action "addToRecords" "Two"}}>Add me</span>
 
+{{! these records are elements of the list that we are adding}}
 <ul>
   {{#each records as |record|}}
     <li>
@@ -15,4 +16,5 @@
   {{/each}}
 </ul>
 
+{{! these are all repositories of current org }}
 {{outlet}}
