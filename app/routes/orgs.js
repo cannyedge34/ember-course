@@ -12,13 +12,18 @@ export default Route.extend({
   },
 
   model() {
-    return [
-      {id: "google"},
-      {id: "apple"},
-      {id: "microsoft"},
-      {id: "yahoo"},
-      {id: "netflix"},
-      {id: "facebook"}
-    ];
+    
+    return new Promise((resolve, reject) => {
+      Ember.run.later(() => {
+        resolve([
+          {id: "google"},
+          {id: "apple"},
+          {id: "microsoft"},
+          {id: "yahoo"},
+          {id: "netflix"},
+          {id: "facebook"}
+        ]);
+      }, 3000);
+    });
   }
 });
