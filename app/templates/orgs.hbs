@@ -2,13 +2,28 @@
 
 <ul>
   {{#each model as |org|}}
-    <li>
-      <span {{ action "favoriteClicked" org }}>
-        Favorite
-      </span>
-      {{link-to org.id "org" org.id }}
-    </li>
+    {{github-org
+      organization=org
+      clicked=(action "favoriteClicked" org)
+    }}
   {{/each}}
 </ul>
+
+{{! we need create an orgs controller because of with the new versions of ember,
+  the closure action will NOT bubble up to the route and above. See more:
+  https://stackoverflow.com/questions/42474699/ember-js-assertion-failed-an-action-named-actiontest-was-not-found-in-gener
+}}
+{{social-info
+    name="Canny Edge"
+    twitter="cannyedge34"
+    github="cannyedge34"
+    onLinksToggle=(action "linksToggled")
+    }}
+
+{{social-info
+    name="Canny Edge"
+    github="cannyedge34"
+    onLinksToggle=(action "linksToggled")
+    }}
 
 {{outlet}}
