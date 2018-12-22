@@ -5,9 +5,8 @@ export default Controller.extend({
     linksToggled() {
       console.log('emitted event from child social component')
     },
-    favoriteClicked(org) {
-      console.log(org.id)
-      console.log('emitted event from child github-org component')
+    favoriteClicked(orgId) {
+      console.log(`emitted event from child github-org component and received ${orgId}`)
     }
   }
 });

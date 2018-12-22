@@ -4,10 +4,15 @@
   {{#each model as |org|}}
     {{github-org
       organization=org
-      clicked=(action "favoriteClicked" org)
+      clicked=(action "favoriteClicked" value="id")
     }}
   {{/each}}
 </ul>
+{{! 
+  value="id" is organization id emitted from github-org.js
+  component file from this.clicked(organization); action inside of method favoriteWasClicked(). It's
+  not org.id value.
+}}
 
 {{! we need create an orgs controller because of with the new versions of ember,
   the closure action will NOT bubble up to the route and above. See more:
