@@ -9,5 +9,10 @@ export default Service.extend({
   favoriteItem(item) {
     this.get('items').addObject(item);
     console.log(this.get('items').map(i => i.id ).join(', ')); /* eslint-disable-line no-console */
+  },
+
+  unfavoriteItem(item) {
+    this.get('items').removeObject(item);
+    console.log(this.get('items').map(i => i.id ).join(', ')); /* eslint-disable-line no-console */
   }
 });
