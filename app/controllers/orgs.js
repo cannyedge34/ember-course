@@ -6,7 +6,8 @@ export default Controller.extend({
       console.log('emitted event from child social component')
     },
     favoriteClicked(orgId) {
-      console.log(`emitted event from child github-org component and received ${orgId}`)
+      // Receiving orgId from github-org child component
+      console.log(`current favorite clicked ${orgId}`);
     }
   }
 });
