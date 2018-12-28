@@ -6,6 +6,7 @@ export default Component.extend({
   tagName: 'li',
   favorites: service('favorites'),
   isFavorited: isInArray('organization', 'favorites.items'),
+  classNames: ['github-org'],
   actions: {
     favoriteWasClicked() {
       // this organization is caught from github-org.hbs file
@@ -20,7 +21,7 @@ export default Component.extend({
         this.get('favorites').unfavoriteItem(organization)
       }
 
-      this.clicked(organization);
-    }
-  }
+      // this.clicked(organization);
+    },
+  },
 });

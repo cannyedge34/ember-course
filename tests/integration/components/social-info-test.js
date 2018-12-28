@@ -12,15 +12,30 @@ module('Integration | Component | social-info', function(hooks) {
 
     await render(hbs`{{social-info}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), `Github:
+      
+      
+      
+    
+  
+
+
+    Close`);
 
     // Template block usage:
     await render(hbs`
       {{#social-info}}
-        template block text
       {{/social-info}}
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), `Github:
+      
+      
+      
+    
+  
+
+
+    Close`);
   });
 });
