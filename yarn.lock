@@ -2444,7 +2444,7 @@ ember-fetch@^6.3.0:
 
 ember-inflector@^3.0.0:
   version "3.0.0"
-  resolved "https://registry.yarnpkg.com/ember-inflector/-/ember-inflector-3.0.0.tgz#7e1ee8aaa0fa773ba0905d8b7c0786354d890ee1"
+  resolved "https://npm.nosolosoftware.es/ember-inflector/-/ember-inflector-3.0.0.tgz#7e1ee8aaa0fa773ba0905d8b7c0786354d890ee1"
   dependencies:
     ember-cli-babel "^6.6.0"
 
